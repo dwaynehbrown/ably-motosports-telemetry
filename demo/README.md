@@ -15,8 +15,8 @@ CAR_B_HZ=5
 CAR_B_GPS_HZ=2
 CAR_A_ID=car-a
 CAR_B_ID=car-b
-DEMO_PREMIUM=true
-NEXT_PUBLIC_DEMO_PREMIUM=true
+DEMO_PREMIUM=false
+NEXT_PUBLIC_DEMO_PREMIUM=false
 ABLY_API_KEY= --- your key ---
 
 ```
@@ -24,7 +24,7 @@ ABLY_API_KEY= --- your key ---
 Simulate a 'premium' experience to gain full history and track wide notifications update .env
 
 ```
-DEMO_PREMIUM=false
+DEMO_PREMIUM=true
 NEXT_PUBLIC_DEMO_false=true
 
 ```
