@@ -2,6 +2,25 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+```
+
+.env expects
+
+RACE_ID=demo-123
+NEXT_PUBLIC_ABLY_AUTH_URL=/api/ably/token
+NEXT_PUBLIC_ABLY_DEBUG=true
+CAR_A_HZ=5   # 5 Hz == every 200 ms
+CAR_A_GPS_HZ=2
+CAR_B_HZ=5
+CAR_B_GPS_HZ=2
+CAR_A_ID=car-a
+CAR_B_ID=car-b
+DEMO_PREMIUM=true
+NEXT_PUBLIC_DEMO_PREMIUM=true
+ABLY_API_KEY= --- your key ---
+
+```
+
 Simulate a 'premium' experience to gain full history and track wide notifications update .env
 
 ```
@@ -11,14 +30,14 @@ NEXT_PUBLIC_DEMO_false=true
 ```
 
 
-First, run the UI:
+Then, run the UI:
 
 ```bash
 npm run dev
 
 ```
 
-then start the publishers
+Then, start the publishers
 
 ```bash
 npm run demo
