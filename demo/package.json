@@ -1,0 +1,35 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "pub:carA": "tsx -r dotenv/config scripts/publishers/car-a.ts",
+    "pub:carB": "tsx -r dotenv/config scripts/publishers/car-b.ts",
+    "pub:track": "tsx -r dotenv/config scripts/publishers/track.ts",
+    "sub:aggregator": "tsx -r dotenv/config scripts/subscribers/aggregator.ts",
+    "demo": "concurrently -n \"CAR_A,CAR_B,TRACK,AGG\" -c \"cyan,magenta,yellow,green\" \"npm:pub:carA\" \"npm:pub:carB\" \"npm:pub:track\" \"npm:sub:aggregator\""
+  },
+  "dependencies": {
+    "ably": "^2.14.0",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.3",
+    "next": "16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6",
+    "typescript": "^5"
+  }
+}
